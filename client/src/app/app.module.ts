@@ -5,6 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
 
+// botstrap
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { AppComponent } from './app.component';
 import { PanelModule } from './panel/panel.modules';
 
@@ -17,6 +20,7 @@ import { PanelModule } from './panel/panel.modules';
     FormsModule,
     CommonModule,
     BrowserModule,
+    NgbModule,
     RouterModule,
     PanelModule
   ],

@@ -2,6 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
+// maps
+import { AgmCoreModule } from '@agm/core';
+
+// botstrap
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 // componenets
 import { PanelComponent } from './panel.component';
 
@@ -11,8 +17,12 @@ const routers: Routes = [
 
 @NgModule({
     imports: [
+        NgbModule.forRoot(),
         CommonModule,
-        RouterModule.forRoot(routers)
+        RouterModule.forRoot(routers),
+        AgmCoreModule.forRoot({
+            apiKey: 'your key'
+          })
     ],
     declarations: [
         PanelComponent
