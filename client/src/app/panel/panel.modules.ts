@@ -9,7 +9,11 @@ import { AgmCoreModule } from '@agm/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // componenets
+import { ColorClickDirective } from './directives/colorclick.directive';
+import { SaveClicksDirective } from './directives/save-clicks.directive';
 import { PanelComponent } from './panel.component';
+import { NavbarComponent } from './componets/navbar/navbar.component';
+import { WidthDirective } from './directives/width.directive';
 
 const routers: Routes = [
     { path: '', component: PanelComponent }
@@ -21,10 +25,14 @@ const routers: Routes = [
         CommonModule,
         RouterModule.forRoot(routers),
         AgmCoreModule.forRoot({
-            apiKey: 'your key'
+            apiKey: 'api key'
           })
     ],
     declarations: [
+        WidthDirective,
+        ColorClickDirective,
+        SaveClicksDirective,
+        NavbarComponent,
         PanelComponent
     ],
     providers: [/* TODO: Providers go here */],

@@ -9,6 +9,13 @@ export class PanelComponent implements OnInit {
   lat: number = 51.678418;
   lng: number = 7.809007;
 
+  public muck = [
+    { lugar: 'Roma', plan: 'pagado' },
+    { lugar: 'Madrid', plan: 'no pagado' },
+    { lugar: 'Paris', plan: 'pagado' },
+    { lugar: 'Irlanda', plan: 'no pagado' }
+  ];
+
   constructor() { }
 
   ngOnInit() {

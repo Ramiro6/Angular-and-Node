@@ -1,3 +1,24 @@
+<app-navbar></app-navbar>
+
 <agm-map [latitude]="lat" [longitude]="lng">
   <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
 </agm-map>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h1>Lugares cercanos</h1>
+      <ng-container *ngFor="let item of muck">
+        <a>
+          <h4 appSaveClicks [appResaltar]="item.plan"> {{ item.lugar }} </h4>
+        </a>
+      </ng-container>
+    </div>
+
+    <div class="col-md-4">
+      <h1>Destacados</h1>
+    </div>
+
+  </div>
+</div>

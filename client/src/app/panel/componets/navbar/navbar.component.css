@@ -1,0 +1,34 @@
+/deep/ .card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #f8f9fa;
+    background-clip: border-box;
+    border: 0px;
+    border-radius: .25rem;
+}
+
+
+
+
+/deep/ .card-header {
+    padding: 0px;
+    margin-bottom: 0px;
+    background-color: 0px;
+    border-bottom: 0px;
+    align-content: right;
+}
+
+@media (max-width: 991px) {
+    .navbar {
+        display: block;
+    }
+}
+
+.navbar-toggler {
+    float: right;
+}

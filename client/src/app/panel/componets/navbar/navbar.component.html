@@ -1,0 +1,51 @@
+<nav (window:resize)="onResize($event)" appWidth class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Logo</a>
+
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" 
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+          (click)="acc.toggle('toggle-1')">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  <ngb-accordion #acc="ngbAccordion">
+      <ngb-panel id="toggle-1">
+        <ng-template ngbPanelContent>
+            <div *ngIf="changeNavbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Inicio
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contacto</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+        </ng-template>
+      </ngb-panel>
+    </ngb-accordion>
+    
+    <!-- <button class="btn btn-sm btn-outline-primary" >Toggle first</button> -->
+  
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Inicio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contacto</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
