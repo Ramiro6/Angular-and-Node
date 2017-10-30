@@ -12,9 +12,6 @@
     border-radius: .25rem;
 }
 
-
-
-
 /deep/ .card-header {
     padding: 0px;
     margin-bottom: 0px;
@@ -31,4 +28,8 @@
 
 .navbar-toggler {
     float: right;
+}
+
+/deep/ .card-body {
+    padding: 0px;
 }

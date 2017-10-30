@@ -9,12 +9,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { PanelModule } from './panel/panel.modules';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent
   ],
   imports: [
     HttpModule,

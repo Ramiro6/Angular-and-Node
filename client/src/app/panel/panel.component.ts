@@ -6,8 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./panel.component.css']
 })
 export class PanelComponent implements OnInit {
-  lat: number = 51.678418;
-  lng: number = 7.809007;
 
   public muck = [
     { lugar: 'Roma', plan: 'pagado' },
@@ -15,7 +13,6 @@ export class PanelComponent implements OnInit {
     { lugar: 'Paris', plan: 'pagado' },
     { lugar: 'Irlanda', plan: 'no pagado' }
   ];
-
   constructor() { }
 
   ngOnInit() {

@@ -12,8 +12,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ColorClickDirective } from './directives/colorclick.directive';
 import { SaveClicksDirective } from './directives/save-clicks.directive';
 import { PanelComponent } from './panel.component';
-import { NavbarComponent } from './componets/navbar/navbar.component';
 import { WidthDirective } from './directives/width.directive';
+import { MapsComponent } from './componets/maps/maps.component';
 
 const routers: Routes = [
     { path: '', component: PanelComponent }
@@ -32,8 +32,8 @@ const routers: Routes = [
         WidthDirective,
         ColorClickDirective,
         SaveClicksDirective,
-        NavbarComponent,
-        PanelComponent
+        PanelComponent,
+        MapsComponent
     ],
     providers: [/* TODO: Providers go here */],
 })
