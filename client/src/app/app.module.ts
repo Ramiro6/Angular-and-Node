@@ -11,6 +11,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PanelModule } from './panel/panel.modules';
+import { DetalleModule } from './detalle/detalle.module';
+import { ContactoModule } from './contacto/contacto.modules';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { PanelModule } from './panel/panel.modules';
     BrowserModule,
     NgbModule,
     RouterModule,
-    PanelModule
+    PanelModule,
+    DetalleModule,
+    ContactoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

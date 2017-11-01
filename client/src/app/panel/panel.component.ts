@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-panel',
@@ -8,12 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class PanelComponent implements OnInit {
 
   public muck = [
-    { lugar: 'Roma', plan: 'pagado' },
-    { lugar: 'Madrid', plan: 'no pagado' },
-    { lugar: 'Paris', plan: 'pagado' },
-    { lugar: 'Irlanda', plan: 'no pagado' }
+    { id: 1, lugar: 'Roma', plan: 'pagado' },
+    { id: 2, lugar: 'Madrid', plan: 'no pagado' },
+    { id: 3, lugar: 'Paris', plan: 'pagado' },
+    { id: 4, lugar: 'Irlanda', plan: 'no pagado' }
   ];
-  constructor() { }
+
+
+  constructor( private routes: ActivatedRoute) {
+    console.log(this.routes.snapshot.params['id']);
+  }
 
   ngOnInit() {
   }
