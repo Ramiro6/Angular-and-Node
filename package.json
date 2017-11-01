@@ -1,0 +1,27 @@
+{
+  "name": "angular-and-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ramiro6/Angular-and-Node.git"
+  },
+  "author": "Ramiro Ruiz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ramiro6/Angular-and-Node/issues"
+  },
+  "homepage": "https://github.com/Ramiro6/Angular-and-Node#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
