@@ -1,0 +1,46 @@
+<div>
+  <a routerLink="">Contacto</a>
+</div>
+
+<div class="container">
+
+  <form (ngSubmit)="newForm(forma)" #forma="ngForm">
+
+  <label>Name</label>
+    <input type="text" 
+          class="form-control"
+          name="new.name"
+          [(ngModel)]="new.name">
+  <br>
+  <label>Distancia</label>
+  <input type="text" 
+         class="form-control"
+         name="new.distancia"
+         [(ngModel)]="new.distancia">
+  <br>
+
+  <label>Cercania</label>
+  <input type="text" 
+         class="form-control"
+         name="new.cercanias"
+         [(ngModel)]="new.cercanias">
+  <br>
+
+  <label>plan</label>
+  <input type="text" 
+         class="form-control"
+         name="new.plan"
+         [(ngModel)]="new.plan">
+  <br>
+
+  <label>Descripcion</label>
+  <textarea class="form-control"
+            name="new.description"
+            [(ngModel)]="new.description"></textarea>
+
+  <br>
+  <hr>
+  <button class="btn btn-primary">Send</button>
+  <a class="btn btn-default" routerLink="">Cancelar</a>
+</form>
+</div>

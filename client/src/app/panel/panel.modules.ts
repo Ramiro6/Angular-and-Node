@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 // maps
 import { AgmCoreModule } from '@agm/core';
@@ -14,13 +15,16 @@ import { SaveClicksDirective } from './directives/save-clicks.directive';
 import { PanelComponent } from './panel.component';
 import { WidthDirective } from './directives/width.directive';
 import { MapsComponent } from './componets/maps/maps.component';
+import { NewBusinessComponent } from './componets/new-business/new-business.component';
 
 const routers: Routes = [
-    { path: '', component: PanelComponent }
+    { path: '', component: PanelComponent },
+    { path: 'new', component: NewBusinessComponent }
 ];
 
 @NgModule({
     imports: [
+        FormsModule,
         NgbModule.forRoot(),
         CommonModule,
         RouterModule.forRoot(routers),
@@ -33,7 +37,8 @@ const routers: Routes = [
         ColorClickDirective,
         SaveClicksDirective,
         PanelComponent,
-        MapsComponent
+        MapsComponent,
+        NewBusinessComponent
     ],
     providers: [/* TODO: Providers go here */],
 })

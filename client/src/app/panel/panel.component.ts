@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ServicesService } from '../services/services.service';
 
 @Component({
   selector: 'app-panel',
@@ -7,20 +8,14 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./panel.component.css']
 })
 export class PanelComponent implements OnInit {
-
-  public muck = [
-    { id: 1, lugar: 'Roma', plan: 'pagado' },
-    { id: 2, lugar: 'Madrid', plan: 'no pagado' },
-    { id: 3, lugar: 'Paris', plan: 'pagado' },
-    { id: 4, lugar: 'Irlanda', plan: 'no pagado' }
-  ];
-
-
-  constructor( private routes: ActivatedRoute) {
+  public database: any [] = [];
+  constructor( private routes: ActivatedRoute,
+               private _api: ServicesService ) {
     console.log(this.routes.snapshot.params['id']);
   }
 
   ngOnInit() {
+    this.database = this._api.getDb();
   }
 
 }

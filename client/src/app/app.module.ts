@@ -8,6 +8,8 @@ import { Routes, RouterModule } from '@angular/router';
 // botstrap
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { ServicesService } from './services/services.service';
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PanelModule } from './panel/panel.modules';
@@ -31,7 +33,9 @@ import { ContactoModule } from './contacto/contacto.modules';
     DetalleModule,
     ContactoModule
   ],
-  providers: [],
+  providers: [
+    ServicesService
+  ],
   bootstrap: [AppComponent]
 })
 
