@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ServicesService } from '../../../services/services.service';
 
 @Component({
   selector: 'app-new-business',
@@ -16,14 +17,19 @@ export class NewBusinessComponent implements OnInit {
     description: ''
   };
 
-  constructor() { }
+  constructor( private _api: ServicesService ) { }
 
   ngOnInit() {
   }
 
   newForm(forma: NgForm ) {
-    console.log('sksksk');
-    console.log(this.new);
+    console.log();
+
+    // let x = `name=${this.new.name}`;
+
+    this._api.postNew( JSON.stringify(this.new ) ).subscribe( res => {
+      console.log(res);
+    });
   }
 
 }

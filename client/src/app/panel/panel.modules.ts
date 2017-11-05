@@ -16,6 +16,7 @@ import { PanelComponent } from './panel.component';
 import { WidthDirective } from './directives/width.directive';
 import { MapsComponent } from './componets/maps/maps.component';
 import { NewBusinessComponent } from './componets/new-business/new-business.component';
+import { maps } from '../../environments/apike';
 
 const routers: Routes = [
     { path: '', component: PanelComponent },
@@ -29,7 +30,7 @@ const routers: Routes = [
         CommonModule,
         RouterModule.forRoot(routers),
         AgmCoreModule.forRoot({
-            apiKey: 'api key'
+            apiKey: maps.key
           })
     ],
     declarations: [

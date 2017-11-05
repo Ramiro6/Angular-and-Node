@@ -7,8 +7,8 @@
       <h1>Lugares cercanos</h1>
       <button class="btn btn-primary" routerLink="new">Crear negocio</button>
       <ng-container *ngFor="let item of database">
-        <a routerLink="/detalle/{{ item.id }}" [queryParams]="{action:'view'}">
-          <h4 appSaveClicks [appResaltar]="item.plan"> {{ item.lugar }} </h4>
+        <a routerLink="/detalle/{{ item._id }}" [queryParams]="{action:'view'}">
+          <h4 appSaveClicks [appResaltar]="item.plan"> {{ item.name }} </h4>
         </a>
       </ng-container>
     </div>

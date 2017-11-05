@@ -8,14 +8,16 @@ import { ServicesService } from '../services/services.service';
   styleUrls: ['./panel.component.css']
 })
 export class PanelComponent implements OnInit {
-  public database: any [] = [];
+  public database: any[] = [];
   constructor( private routes: ActivatedRoute,
                private _api: ServicesService ) {
     console.log(this.routes.snapshot.params['id']);
   }
 
   ngOnInit() {
-    this.database = this._api.getDb();
+    this._api.getDb().subscribe( res => {
+      this.database = res.item;
+    });
   }
 
 }
