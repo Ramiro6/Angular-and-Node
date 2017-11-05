@@ -1,3 +1,4 @@
 /client/node_modules/
-/client/src/app/panel/panel.modules.ts/
+/client/src/environments/apike/
 node_modules/
+src/environments/apike/

@@ -2,6 +2,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const body = require('body-parser')
+const cors = require('cors')
 const app = express()
 
 app.use(body.urlencoded({ extended: false }))
@@ -17,9 +18,9 @@ app.post('/api/new', controller.postnewWork);
 
 
 
+
 const port = process.env.PORT || 3000
-
-
+app.options('*', cors())
 
 mongoose.connect('mongodb://localhost:27017/test', (err, res) => {
     if(err) { throw err }
